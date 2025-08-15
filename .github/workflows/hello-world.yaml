@@ -5,9 +5,9 @@ on:
 
 jobs:
   hello:
-    name: Say Hello
+    name: Say Hello Sandzxzs
     runs-on: self-hosted
 
     steps:
       - name: Print Hello World
-        run: echo "Hello, World from self-hosted runner!"
+        run: echo "Hello, World from self-hosted runner! This is GH runner!"
