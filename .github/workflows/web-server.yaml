@@ -3,16 +3,17 @@ on:
 
 jobs:
   install-httpd:
-    runs-on [self-hosted, linux, x64]
+    runs-on: [self-hosted, linux, x64]
 
     steps:
-      - name Install Apache HTTPD
-        run:
+      - name: Install Apache HTTPD
+        run: |
           sudo dnf install -y httpd
           sudo systemctl enable httpd
           sudo systemctl start httpd
           sudo systemctl status httpd
 
-       - name: Serve a test page
-         run:
-           echo "Hello! from GH actions from Centos09" | sudo tee /var/www/html/index.html
+      - name: Serve a test page
+        run: |
+          echo "Hello from GH Actions on CentOS 9!" | sudo tee /var/www/html/index.html
+
